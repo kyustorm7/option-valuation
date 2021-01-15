@@ -70,7 +70,7 @@ def put_vega(S, E, T, r, sigma):
 def put_theta(S, E, T, r, sigma):
     return 0.01*(-(S*norm.pdf(d1(S,E,T,r,sigma))*sigma)/(2*sqrt(T)) + r*E*exp(-r*T)*norm.cdf(-d2(S,E,T,r,sigma)))
 def put_rho(S, E, T, r, sigma):
-    return 0.01*(-K*T*exp(-r*T)*norm.cdf(-d2(S,K,T,r,sigma)))
+    return 0.01*(-E*T*exp(-r*T)*norm.cdf(-d2(S,E,T,r,sigma)))
 
 
 
