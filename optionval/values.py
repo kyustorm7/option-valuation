@@ -72,7 +72,7 @@ def blackscholes(S, E, T, r, sigma, PutCall = 'C'):
 
     return result
 
-def volatility(stock_sd, bond_sd, stock_weight = None, bond_weight = None, corr):
+def volatility(stock_sd, bond_sd, stock_weight = None, bond_weight = None, corr = 0 ):
     # Check for Value Error
     if not isinstance(stock_sd, (int, float)):
         raise ValueError(("stock_sd must be numeric"))
@@ -94,7 +94,7 @@ def volatility(stock_sd, bond_sd, stock_weight = None, bond_weight = None, corr)
         raise ValueError(("Weight variables must be between 0 and 1."))
     if stock_weight + bond_weight != 1:
         raise ValueError(("Sum of stock wieght and bond_weight must be equal to 1."))
-    if corr < 0 or corr > 1:
+    if corr < -1 or corr > 1:
         raise ValueError(("Variable corr must be between 0 and 1."))
 
 
