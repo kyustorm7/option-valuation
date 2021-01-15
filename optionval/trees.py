@@ -67,7 +67,7 @@ def BinomialAmerican(n, S, K, r, v, t, PutCall = "C"):
     return optionvalue[0, 0]
 
 
-def BinomialEuropean(n, S, K, r, v, t, PutCall):
+def BinomialEuropean(n, S, K, r, v, t, PutCall = 'C'):
 
     # Check Input for ValueError
     if not isinstance(n, (int)):
@@ -120,7 +120,7 @@ def BinomialEuropean(n, S, K, r, v, t, PutCall):
     return optionvalue[0, 0]
 
 
-def BinomialEuropean_graph(n, S, K, r, v, t, PutCall):
+def BinomialEuropean_graph(n, S, K, r, v, t, PutCall = 'C'):
 
     # Check Input for ValueError
     if not isinstance(n, (int)):
@@ -167,7 +167,7 @@ def BinomialEuropean_graph(n, S, K, r, v, t, PutCall):
         plt.show()
 
 
-def BinomialAmerican_graph(n, S, K, r, v, t, PutCall):
+def BinomialAmerican_graph(n, S, K, r, v, t, PutCall = 'C'):
     # Check Input for ValueError
     if not isinstance(n, (int)):
         raise ValueError(("n must be integer"))
@@ -214,7 +214,7 @@ def BinomialAmerican_graph(n, S, K, r, v, t, PutCall):
         plt.show()
 
 
-def BinomialAmerican_tree(n, S, K, r, v, t, PutCall):
+def BinomialAmerican_tree(n, S, K, r, v, t, PutCall = 'C'):
     # Check Input for ValueError
     if not isinstance(n, (int)):
         raise ValueError(("n must be integer"))
@@ -307,7 +307,7 @@ def BinomialAmerican_tree(n, S, K, r, v, t, PutCall):
         plt.show()
 
 
-def BinomialEuropean_tree(n, S, K, r, v, t, PutCall):
+def BinomialEuropean_tree(n, S, K, r, v, t, PutCall = 'C'):
     # Check Input for ValueError
     if not isinstance(n, (int)):
         raise ValueError(("n must be integer"))
