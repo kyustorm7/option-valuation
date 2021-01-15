@@ -84,11 +84,11 @@ def volatility(stock_sd, bond_sd, stock_weight = None, bond_weight = None, corr)
         raise ValueError(("bond_weight must be numeric"))
     if not isinstance(corr, (int, float)):
         raise ValueError(("corr must be numeric"))
-    if stock_weight == None and bond_weight = None:
+    if stock_weight == None and bond_weight == None:
         stock_weight, bond_weight = 0.5, 0.5
-    elif stock_weight = None:
+    elif stock_weight == None:
         stock_weight = 1 - bond_weight
-    elif bond_weight = None:
+    elif bond_weight == None:
         bond_weight = 1 - stock_weight
     if stock_weight < 0 or stock_weight > 1 or bond_weight < 0 or stock_weight > 1:
         raise ValueError(("Weight variables must be between 0 and 1."))
